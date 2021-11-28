@@ -10,7 +10,7 @@ namespace DemoRegex
             bool flag = true;
             while(flag)
             { 
-                Console.WriteLine("Choose the program to be executed : \n 1. PinCode Validation \n 2. Exit");
+                Console.WriteLine("Choose the program to be executed : \n 1. PinCode Validation \n 2. Email validation \n 3. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -21,6 +21,12 @@ namespace DemoRegex
                         Console.WriteLine(patterns.validatePin("400 008"));
                         break;
                     case 2:
+                        Console.WriteLine(patterns.validateFirstName("abc"));
+                        Console.WriteLine(patterns.validateSecondPart("abc@bridgelabz"));
+                        Console.WriteLine(patterns.validateThirdPart("abc@bridgelabz.co"));
+                        Console.WriteLine(patterns.validateOptionalPart("abc.xyz@bridgelabz.co.in"));
+                        break;
+                    case 3:
                         flag = false;
                         break;
                 }
